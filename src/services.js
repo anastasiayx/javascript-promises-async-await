@@ -11,7 +11,7 @@ export function fetchMovies() {
 
 export function fetchBooks() {
   return fetch('./data/movies.json')
-    .then((response) => response)
+    .then((response) => response.json())
     .then((books) => books)
     .catch((error) => console.log(error));
 }
